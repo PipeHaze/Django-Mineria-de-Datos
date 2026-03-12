@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Análisis de Homicidios</title>
+    <style>
+        @page {
+            size: a4;
+            margin: 2cm;
+        }
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            line-height: 1.4;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 24px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            font-size: 18px;
+            background: #ecf0f1;
+            padding: 8px;
+            border-left: 5px solid #3498db;
+            page-break-after: avoid;
+        }
+        .region-section {
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+        }
+        .grafico {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .grafico img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 11px;
+        }
+        th {
+            background: #3498db;
+            color: white;
+            padding: 8px;
+            text-align: center;
+        }
+        td {
+            border: 1px solid #bdc3c7;
+            padding: 6px;
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            font-size: 10px;
+            color: #7f8c8d;
+            margin-top: 50px;
+            border-top: 1px solid #bdc3c7;
+            padding-top: 10px;
+        }
+        .badge-success {
+            background: #2ecc71;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+        }
+        .badge-danger {
+            background: #e74c3c;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 Análisis de Homicidios por Región</h1>
+    
+    <div style="background: #f8f9fa; padding: 15px; margin: 20px 0;">
+        <h3>📋 Resumen General</h3>
+        <table>
+            <tr>
+                <th>Total Regiones</th>
+                <th>Fecha Generación</th>
+                <th>Total Homicidios 2024</th>
+            </tr>
+            <tr>
+                <td>{{ stats_generales.total_regiones }}</td>
+                <td>{{ stats_generales.fecha_generacion }}</td>
+                <td>{{ stats_generales.total_homicidios_2024|floatformat:0 }}</td>
+            </tr>
+        </table>
+    </div>
+    
+    {% for region in datos %}
+    <div class="region-section">
+        <h2>📍 {{ region.nombre }}</h2>
+        
+        <div class="grafico">
+            <h3>🔴 Homicidios</h3>
+            <img src="data:image/png;base64,{{ region.homicidios }}" alt="Gráfico Homicidios">
+        </div>
+        
+        <div class="grafico">
+            <h3>🟢 Tasa de Homicidios</h3>
+            <img src="data:image/png;base64,{{ region.tasa }}" alt="Gráfico Tasa">
+        </div>
+        
+        <h3>📈 Datos por Año</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Año</th>
+                    {% for año in region.años %}
+                    <th>{{ año }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Homicidios</th>
+                    {% for valor in region.datos_homicidios %}
+                    <td>{{ valor|floatformat:0 }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th>Tasa</th>
+                    {% for valor in region.datos_tasa %}
+                    <td>{{ valor|floatformat:1 }}</td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>📊 Estadísticas</h3>
+        <table>
+            <tr>
+                <th>Promedio Homicidios</th>
+                <th>Promedio Tasa</th>
+                <th>Máx Homicidios</th>
+                <th>Min Homicidios</th>
+                <th>Tendencia</th>
+            </tr>
+            <tr>
+                <td>{{ region.stats.promedio_homicidios|floatformat:1 }}</td>
+                <td>{{ region.stats.promedio_tasa|floatformat:1 }}</td>
+                <td>{{ region.stats.max_homicidios|floatformat:0 }}</td>
+                <td>{{ region.stats.min_homicidios|floatformat:0 }}</td>
+                <td>
+                    {% if region.stats.tendencia == "Creciente" %}
+                        <span class="badge-success">📈 Creciente</span>
+                    {% else %}
+                        <span class="badge-danger">📉 Decreciente</span>
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+    </div>
+    {% endfor %}
+    
+    <div class="footer">
+        <p>Generado el {{ stats_generales.fecha_generacion }}</p>
+        <p>Fuente: Sistema de Análisis de Homicidios</p>
+    </div>
+</body>
+</html>

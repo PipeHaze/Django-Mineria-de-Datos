@@ -1,0 +1,38 @@
+{
+"type": "FeatureCollection",
+"features": [
+
+{"type":"Feature","properties":{"RegionExcel":"Región De Arica Y Parinacota"},"geometry":{"type":"Polygon","coordinates":[[[-70.4,-18.4],[-69.5,-18.4],[-69.5,-19.5],[-70.4,-19.5],[-70.4,-18.4]]]}},
+
+{"type":"Feature","properties":{"RegionExcel":"Región De Tarapacá"},"geometry":{"type":"Polygon","coordinates":[[[-70.5,-19.5],[-69.4,-19.5],[-69.4,-21.0],[-70.5,-21.0],[-70.5,-19.5]]]}},
+
+{"type":"Feature","properties":{"RegionExcel":"Región De Antofagasta"},"geometry":{"type":"Polygon","coordinates":[[[-71.0,-21.0],[-68.0,-21.0],[-68.0,-25.0],[-71.0,-25.0],[-71.0,-21.0]]]}},
+
+{"type":"Feature","properties":{"RegionExcel":"Región De Atacama"},"geometry":{"type":"Polygon","coordinates":[[[-71.5,-25.0],[-69.0,-25.0],[-69.0,-28.5],[-71.5,-28.5],[-71.5,-25.0]]]}},
+
+{"type":"Feature","properties":{"RegionExcel":"Región De Coquimbo"},"geometry":{"type":"Polygon","coordinates":[[[-72.0,-28.5],[-70.0,-28.5],[-70.0,-31.5],[-72.0,-31.5],[-72.0,-28.5]]]}},
+
+{"type":"Feature","properties":{"RegionExcel":"Región De Valparaíso"},"geometry":{"type":"Polygon","coordinates":[[[-72.5,-31.5],[-70.5,-31.5],[-70.5,-33.5],[-72.5,-33.5],[-72.5,-31.5]]]}},
+
+{"type":"Feature","properties":{"RegionExcel":"Región Metropolitana De Santiago"},"geometry":{"type":"Polygon","coordinates":[[[-71.8,-33.3],[-70.2,-33.3],[-70.2,-34.5],[-71.8,-34.5],[-71.8,-33.3]]]}},
+
+{"type":"Feature","properties":{"RegionExcel":"Región Del Libertador Gral. Bernardo O'higgins"},"geometry":{"type":"Polygon","coordinates":[[[-72.0,-34.5],[-70.0,-34.5],[-70.0,-35.8],[-72.0,-35.8],[-72.0,-34.5]]]}},
+
+{"type":"Feature","properties":{"RegionExcel":"Región Del Maule"},"geometry":{"type":"Polygon","coordinates":[[[-72.5,-35.8],[-70.0,-35.8],[-70.0,-37.0],[-72.5,-37.0],[-72.5,-35.8]]]}},
+
+{"type":"Feature","properties":{"RegionExcel":"Región Del Ñuble"},"geometry":{"type":"Polygon","coordinates":[[[-72.8,-36.5],[-71.0,-36.5],[-71.0,-37.6],[-72.8,-37.6],[-72.8,-36.5]]]}},
+
+{"type":"Feature","properties":{"RegionExcel":"Región Del Biobío"},"geometry":{"type":"Polygon","coordinates":[[[-73.0,-37.0],[-71.0,-37.0],[-71.0,-38.7],[-73.0,-38.7],[-73.0,-37.0]]]}},
+
+{"type":"Feature","properties":{"RegionExcel":"Región De La Araucanía"},"geometry":{"type":"Polygon","coordinates":[[[-73.2,-38.7],[-71.0,-38.7],[-71.0,-40.0],[-73.2,-40.0],[-73.2,-38.7]]]}},
+
+{"type":"Feature","properties":{"RegionExcel":"Región De Los Ríos"},"geometry":{"type":"Polygon","coordinates":[[[-73.5,-39.5],[-71.5,-39.5],[-71.5,-40.5],[-73.5,-40.5],[-73.5,-39.5]]]}},
+
+{"type":"Feature","properties":{"RegionExcel":"Región De Los Lagos"},"geometry":{"type":"Polygon","coordinates":[[[-74.0,-40.5],[-71.5,-40.5],[-71.5,-43.5],[-74.0,-43.5],[-74.0,-40.5]]]}},
+
+{"type":"Feature","properties":{"RegionExcel":"Región De Aysén Del Gral. Carlos Ibáñez Del Campo"},"geometry":{"type":"Polygon","coordinates":[[[-75.0,-43.5],[-71.0,-43.5],[-71.0,-48.0],[-75.0,-48.0],[-75.0,-43.5]]]}},
+
+{"type":"Feature","properties":{"RegionExcel":"Región De Magallanes Y De La Antártica Chilena"},"geometry":{"type":"Polygon","coordinates":[[[-75.5,-48.0],[-69.5,-48.0],[-69.5,-55.5],[-75.5,-55.5],[-75.5,-48.0]]]}}
+
+]
+}
