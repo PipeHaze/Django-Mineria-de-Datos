@@ -9,7 +9,7 @@
 </head>
 <body class="bg-light">
     <div class="container my-4">
-        <h1 class="text-center mb-4">📊 Homicidios y Tasa por Región</h1>
+        <h1 class="text-center mb-4"> Homicidios y Tasa por Región</h1>
 
         <form method="get" action="" class="row g-3 align-items-center mb-4">
             <div class="col-md-8">
@@ -51,7 +51,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">📥 Exportar Datos</h5>
+                <h5 class="card-title"> Exportar Datos</h5>
                 <form method="get" action="{% url 'graficos:generar_pdf' %}" target="_blank">
                     {% for i in regiones_seleccionadas %}
                         <input type="hidden" name="region_index" value="{{ i }}">

@@ -83,10 +83,10 @@
     </style>
 </head>
 <body>
-    <h1>📊 Análisis de Homicidios por Región</h1>
+    <h1> Análisis de Homicidios por Región</h1>
     
     <div style="background: #f8f9fa; padding: 15px; margin: 20px 0;">
-        <h3>📋 Resumen General</h3>
+        <h3>Resumen General</h3>
         <table>
             <tr>
                 <th>Total Regiones</th>
@@ -103,19 +103,19 @@
     
     {% for region in datos %}
     <div class="region-section">
-        <h2>📍 {{ region.nombre }}</h2>
+        <h2>Region {{ region.nombre }}</h2>
         
         <div class="grafico">
-            <h3>🔴 Homicidios</h3>
+            <h3> Homicidios</h3>
             <img src="data:image/png;base64,{{ region.homicidios }}" alt="Gráfico Homicidios">
         </div>
         
         <div class="grafico">
-            <h3>🟢 Tasa de Homicidios</h3>
+            <h3> Tasa de Homicidios</h3>
             <img src="data:image/png;base64,{{ region.tasa }}" alt="Gráfico Tasa">
         </div>
         
-        <h3>📈 Datos por Año</h3>
+        <h3> Datos por Año</h3>
         <table>
             <thead>
                 <tr>
@@ -141,7 +141,7 @@
             </tbody>
         </table>
         
-        <h3>📊 Estadísticas</h3>
+        <h3> Estadísticas</h3>
         <table>
             <tr>
                 <th>Promedio Homicidios</th>
